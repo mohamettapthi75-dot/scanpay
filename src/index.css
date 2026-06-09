@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F8F9FC] text-[#0F172A] font-sans antialiased selection:bg-[#E8192C]/20 selection:text-[#E8192C] overscroll-none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white border border-[#E2E8F0] shadow-[0_2px_16px_rgba(0,0,0,0.06)] rounded-[20px] text-[#0F172A];
+  }
+  
+  .glass-panel {
+    @apply bg-white border border-[#E2E8F0] shadow-[0_8px_40px_rgba(0,0,0,0.12)] text-[#0F172A];
+  }
+
+  .glass-button {
+    @apply bg-white border border-[#E2E8F0] shadow-sm hover:shadow-md hover:bg-gray-50 transition-all font-medium text-[#0F172A];
+  }
+
+  .glass-list-item {
+    @apply bg-white border-b border-[#E2E8F0] text-[#0F172A] last:border-b-0 hover:bg-gray-50 transition-colors;
+  }
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 70%);
+}

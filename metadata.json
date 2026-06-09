@@ -1,0 +1,10 @@
+{
+  "name": "ScanPay",
+  "description": "Modern mobile payment app for easy QR code transactions",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
